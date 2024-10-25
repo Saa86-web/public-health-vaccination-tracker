@@ -1,0 +1,8 @@
+app.post('/individuals', (req, res) => {
+    const { name, age, email } = req.body;
+    const query = 'INSERT INTO individuals (name, age, email) VALUES (?, ?, ?)';
+    db.query(query, [name, age, email], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(201).json({ id: result.insertId });
+    });
+});

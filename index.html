@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Tracker</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Vaccination Tracker</h1>
+
+    <h2>Add Individual</h2>
+    <form id="individualForm">
+        <input type="text" placeholder="Name" required id="name" />
+        <input type="number" placeholder="Age" required id="age" />
+        <input type="email" placeholder="Email" required id="email" />
+        <button type="submit">Add Individual</button>
+    </form>
+
+    <h2>Add Vaccination</h2>
+    <form id="vaccinationForm">
+        <input type="number" placeholder="Individual ID" required id="individualId" />
+        <input type="text" placeholder="Vaccination Type" required id="vaccinationType" />
+        <input type="date" required id="vaccinationDate" />
+        <select id="status" required>
+            <option value="completed">Completed</option>
+            <option value="pending">Pending</option>
+            <option value="failed">Failed</option>
+        </select>
+        <button type="submit">Add Vaccination</button>
+    </form>
+
+    <h2>Individuals</h2>
+    <ul id="individualList"></ul>
+
+    <h2>Vaccinations</h2>
+    <ul id="vaccinationList"></ul>
+</body>
+</html>
